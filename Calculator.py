@@ -1,15 +1,10 @@
 from builtins import int
 
 
-print("Calculator started")
-print("Enter a mathematical expression. (Examples: 50 * 37.578 | 3.67 ^ 5.9 | 60.59 / 57.685)")
-
+print("--Calculator--\nEnter a mathematical expression. (Examples: 50 * 37.578 | 3.67 ^ 5.9 | 60.59 / 57.685)")
 
 def user_input():
-    print("")
-    question = str(input("\033[34mExercise: \033[0m"))
-    question = question.lower()
-    return question
+    return input("\n\033[34mExercise: \033[0m").lower()
 
 
 def algorithm(string):
@@ -42,13 +37,10 @@ def algorithm(string):
                 answer = float(exercise[0]) * float(exercise[1])
             elif operator == "/":
                 answer = float(exercise[0]) / float(exercise[1])
-                print("\033[31mError 02: Dividing by 0 equals infinity\033[0m")
-                print("") 
+                print("\033[31mError 02: Dividing by 0 equals infinity\033[0m\n")
                 answer = None
             elif operator == "**":
                 answer = float(exercise[0]) ** float(exercise[1])
-                print("\033[31mError 01: Result too large\033[0m")
-                answer = None
                    
             if isinstance(answer, float) and answer.is_integer():
                 answer = int(answer)
