@@ -37,8 +37,6 @@ def algorithm(string):
                 answer = float(exercise[0]) * float(exercise[1])
             elif operator == "/":
                 answer = float(exercise[0]) / float(exercise[1])
-                print("\033[31mError 02: Dividing by 0 equals infinity\033[0m\n")
-                answer = None
             elif operator == "**":
                 answer = float(exercise[0]) ** float(exercise[1])
                    
